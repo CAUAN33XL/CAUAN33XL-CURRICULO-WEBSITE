@@ -1,0 +1,81 @@
+personal_info:
+  name: Cauan Gabriel Matos Silva
+  address: Condomínio Porto Rico | Santa Maria | Brasília | DF
+  email: cauan33XL@proton.me
+  dob: 15/03/2024
+  nationality: Brazilian
+  phone:
+    - (61) 9 9433-8042
+    - (61) 9 9412-6009
+  objective: Software Developer | Web & Mobile Apps (TypeScript, React) | Frontend Web Developer
+  github: https://github.com/Cauan33XL
+  linkedin: https://www.linkedin.com/in/cauan33xl/
+summary:
+  - Developer focused on creating websites and web/mobile applications using TypeScript and React, combining solid knowledge in systems architecture with a creative vision.
+  - Practical experience in administrative routines, with support for customer service and organization of internal processes.
+  - Solid knowledge in advanced computer science, including Microsoft Office suite, basic programming concepts (Java, C), and Web Development.
+  - Background in systems analysis and development, with skills for applying agile methodologies and providing technical support.
+  - Efficient interpersonal communication, customer service, support, and teamwork skills.
+  - Ability to manage activities, prioritize tasks, and adapt to different organizational demands.
+education:
+  - institution: Centro Universitário UNICEPLAC – Gama DF
+    degree: Bachelor's Degree in Systems Analysis and Development
+    period: July 2023 – December 2025
+  - institution: Centro Interescolar de Línguas (CIL) – Gama DF
+    degree: Spanish – Spanish Language and Literature
+    period: August 2016 – July 2022
+  - institution: Professional Apprenticeship Course – SEST SENAT - Samambaia DF
+    degree: Administrative Assistant in the Transport Sector
+    period: March 2023 – December 2024
+experience:
+  - company: Viação Pioneira Ltda – Brasília/DF
+    role: Young Apprentice (Administrative Assistant)
+    period: March 2023 – January 2025
+    responsibilities:
+      - Passenger assistance and support in operational inquiries.
+      - Administrative support in internal routines within the transport sector.
+      - Organization of documents and management of administrative information.
+skills:
+  languages:
+    - name: Spanish
+      level: Advanced
+    - name: English
+      level: Basic
+  technology:
+    - name: Microsoft Office Suite
+      level: Intermediate
+    - name: Basic Computing
+      level: Advanced
+    - name: Java, C Programming
+      level: Basic
+    - name: Object-Oriented Programming
+      level: Intermediate
+    - name: Web Development
+      level: Basic
+  administrative:
+    - name: Administrative Assistance
+      level: Advanced
+    - name: Project Management
+      level: Basic
+    - name: Communication & Customer Service
+      level: Advanced
+    - name: Teamwork and Collaboration
+      level: Advanced
+projects_disclaimer: "* Note: Most of these projects were developed using AI methodologies and auxiliary tools (Vibe Coding), combined with my structural, administrative, and systems logic knowledge."
+projects:
+  - name: 33XL SYSTEM (OFFICIAL WEBSITE)
+    description: The official website of my brand and ecosystem, centralizing all my bases. A clear testament to my ability to autonomously create, structure, and manage complex digital infrastructures.
+    technologies: [TypeScript, React, Branding, System Architecture]
+    link: https://33xlsystem.vercel.app/
+  - name: REPO ACCESS MANAGER (R.A.M)
+    description: The central access and indexing core for all my repositories (public and private) and websites. A portfolio hub developed with a retro-punk aesthetic for a distributed mind.
+    technologies: [TypeScript, React, Dark UX, Vercel]
+    link: https://repo-access-manager.vercel.app/
+  - name: 33XL STUDY PLATFORM
+    description: A complete LMS/Study platform with real courses, a learning tracks system, and a minimalistic dark aesthetic.
+    technologies: [React, Tailwind CSS, Educational Platform]
+    link: https://33xl-study-platform.vercel.app/
+  - name: NEURO SPACE - NOTES
+    description: A minimal and focused note-taking application using the 33XL minimalist aesthetic.
+    technologies: [React, LocalStorage, Productivity]
+    link: https://neuro-space-notes.vercel.app/

@@ -1,0 +1,81 @@
+personal_info:
+  name: Cauan Gabriel Matos Silva
+  address: Condominio Porto Rico | Santa Maria | Brasilia | DF
+  email: cauan33XL@proton.me
+  dob: 15/03/2024
+  nationality: Brasileño
+  phone:
+    - (61) 9 9433-8042
+    - (61) 9 9412-6009
+  objective: Desarrollador de Software | Apps Web & Móviles (TypeScript, React) | Desarrollador Web Frontend
+  github: https://github.com/Cauan33XL
+  linkedin: https://www.linkedin.com/in/cauan33xl/
+summary:
+  - Desarrollador centrado en la creación de sitios y aplicaciones web y móviles utilizando TypeScript y React, combinando sólidos conocimientos en arquitectura de sistemas con una visión creativa.
+  - Experiencia práctica en rutinas administrativas, brindando apoyo en la atención al público y organización de procesos internos.
+  - Sólidos conocimientos en informática avanzada, incluyendo paquete Microsoft Office, conceptos básicos de programación (Java, C) y Desarrollo Web.
+  - Formación en análisis y desarrollo de sistemas, con habilidades para la aplicación de metodologías ágiles y soporte técnico.
+  - Comunicación interpersonal eficiente, atención al cliente, soporte y habilidades para el trabajo en equipo.
+  - Capacidad para gestionar actividades, priorizar tareas y adaptarse a diferentes exigencias organizativas.
+education:
+  - institution: Centro Universitario UNICEPLAC – Gama DF
+    degree: Grado en Análisis y Desarrollo de Sistemas
+    period: Julio de 2023 – Diciembre de 2025
+  - institution: Centro Interescolar de Lenguas (CIL) – Gama DF
+    degree: Español – Lengua y Literatura Española
+    period: Agosto de 2016 – Julio de 2022
+  - institution: Curso de Aprendizaje Profesional – SEST SENAT - Samambaia DF
+    degree: Asistente Administrativo en el Sector del Transporte
+    period: Marzo de 2023 – Diciembre de 2024
+experience:
+  - company: Viação Pioneira Ltda – Brasilia/DF
+    role: Joven Aprendiz (Asistente Administrativo)
+    period: Marzo de 2023 – Enero de 2025
+    responsibilities:
+      - Atención al pasajero y apoyo en consultas operativas.
+      - Apoyo administrativo en rutinas internas dentro del sector del transporte.
+      - Organización de documentos y gestión de información administrativa.
+skills:
+  languages:
+    - name: Español
+      level: Avanzado
+    - name: Inglés
+      level: Básico
+  technology:
+    - name: Paquete Microsoft Office
+      level: Intermedio
+    - name: Informática Básica
+      level: Avanzado
+    - name: Programación en Java, C
+      level: Básico
+    - name: Programación Orientada a Objetos
+      level: Intermedio
+    - name: Desarrollo Web
+      level: Básico
+  administrative:
+    - name: Asistencia Administrativa
+      level: Avanzado
+    - name: Gestión de Proyectos
+      level: Básico
+    - name: Comunicación y Atención al Cliente
+      level: Avanzado
+    - name: Trabajo en Equipo y Colaboración
+      level: Avanzado
+projects_disclaimer: "* Nota: La mayoría de estos proyectos fueron desarrollados utilizando metodologías de IA y herramientas auxiliares (Vibe Coding), combinados con mi conocimiento estructural, administrativo y de lógica de sistemas."
+projects:
+  - name: 33XL SYSTEM (SITIO WEB OFICIAL)
+    description: El sitio web oficial de mi marca y ecosistema, centralizando todas mis bases. Un claro testimonio de mi capacidad para crear, estructurar y gestionar infraestructuras digitales complejas de forma autónoma.
+    technologies: [TypeScript, React, Branding, Arquitectura de Sistemas]
+    link: https://33xlsystem.vercel.app/
+  - name: REPO ACCESS MANAGER (R.A.M)
+    description: El núcleo central de acceso e indexación para todos mis repositorios (públicos y privados) y sitios web. Un centro de portafolio desarrollado con una estética retro-punk para una mente distribuida.
+    technologies: [TypeScript, React, Dark UX, Vercel]
+    link: https://repo-access-manager.vercel.app/
+  - name: 33XL STUDY PLATFORM
+    description: Una plataforma LMS/Educativa completa con cursos reales, un sistema de rutas de aprendizaje y una estética oscura minimalista.
+    technologies: [React, Tailwind CSS, Plataforma Educativa]
+    link: https://33xl-study-platform.vercel.app/
+  - name: NEURO SPACE - NOTES
+    description: Una aplicación de notas enfocada y minimalista utilizando la estética minimalista 33XL.
+    technologies: [React, LocalStorage, Productividad]
+    link: https://neuro-space-notes.vercel.app/

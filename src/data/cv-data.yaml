@@ -1,0 +1,158 @@
+personal_info:
+  name: Cauan Gabriel Matos Silva
+  address: Condomínio Porto Rico | Santa Maria | Brasília | DF
+  email: cauan33XL@proton.me
+  dob: 15/03/2024
+  nationality: Brasileiro
+  phone:
+    - (61) 9 9433-8042
+    - (61) 9 9412-6009
+  objective: Software Developer | Web & Mobile Apps (TypeScript, React) |
+    Desenvolvedor Web Frontend
+  github: https://github.com/Cauan33XL
+  linkedin: https://www.linkedin.com/in/cauan33xl/
+summary:
+  - Desenvolvedor focado em criar sites e aplicações web e mobile utilizando
+    TypeScript e React, combinando sólidos conhecimentos em arquitetura de
+    sistemas com visão criativa.
+  - Experiência prática em rotinas administrativas, com suporte ao atendimento
+    ao público e organização de processos internos.
+  - Conhecimentos sólidos em informática avançada, incluindo Pacote Office e
+    conceitos básicos de programação (Java, C) e Desenvolvimento Web.
+  - Formação em análise e desenvolvimento de sistemas, com habilidades para
+    aplicação de metodologias ágeis e suporte técnico.
+  - Comunicação interpessoal eficiente, atendimento, suporte e habilidade para
+    trabalho em equipe.
+  - Capacidade de gerenciamento de atividades, priorização de tarefas e
+    adaptação a diferentes demandas organizacionais.
+education:
+  - institution: Centro Universitário UNICEPLAC – Gama DF
+    degree: Graduação em Análise e Desenvolvimento de Sistemas
+    period: Julho de 2023 – Dezembro de 2025
+  - institution: Centro Interescolar de Línguas (CIL) – Gama DF
+    degree: Espanhol – Língua e Literatura Espanhola
+    period: Agosto de 2016 – Julho de 2022
+  - institution: Curso de Aprendizagem Profissional – SEST SENAT - Samambaia DF
+    degree: Assistente Administrativo no Setor dos Transportes
+    period: Março de 2023 – Dezembro de 2024
+experience:
+  - company: Viação Pioneira Ltda – Brasília/DF
+    role: Jovem Aprendiz (Assistente Administrativo)
+    period: Março de 2023 – Janeiro de 2025
+    responsibilities:
+      - Atendimento a passageiros e suporte em dúvidas operacionais.
+      - Apoio administrativo em rotinas internas do setor de transportes.
+      - Organização de documentos e gestão de informações administrativas.
+skills:
+  languages:
+    - name: Espanhol
+      level: Avançado
+    - name: Inglês
+      level: Básico
+  technology:
+    - name: Pacote Office
+      level: Intermediário
+    - name: Informática Básica
+      level: Avançado
+    - name: Programação em Java, C
+      level: Básico
+    - name: Programação Orientada a Objetos
+      level: Intermediário
+    - name: Desenvolvimento Web
+      level: Básico
+  administrative:
+    - name: Auxilio Administrativo
+      level: Avançado
+    - name: Gerenciamento de Projetos
+      level: Básico
+    - name: Comunicação e Atendimento ao Cliente
+      level: Avançado
+    - name: Trabalho em Equipe e Colaboração
+      level: Avançado
+projects:
+  - name: 33XL SYSTEM (WEBSITE OFICIAL)
+    description: O site oficial da minha marca e ecossistema, que centraliza todas
+      as minhas bases. Um atestado claro da minha capacidade de criar,
+      estruturar e gerenciar infraestruturas digitais complexas de forma
+      totalmente autônoma.
+    technologies:
+      - TypeScript
+      - React
+      - Branding
+      - System Architecture
+    link: https://33xl-system-website.vercel.app/
+  - name: REPO ACCESS MANAGER (R.A.M)
+    description: O núcleo central de acesso e indexação de todos os meus
+      repositórios (públicos e privados) e websites. Um hub de portfólio
+      desenvolvido com estética retro-punk para uma mente distribuída.
+    technologies:
+      - TypeScript
+      - React
+    link: https://repo-access-manager.vercel.app/
+  - name: HYDROPUSH APP
+    description: Aplicativo unificando implementações (Capacitor e React Web) para
+      controle de hidratação diária. Sistema totalmente offline, persistência de
+      dados local.
+    technologies:
+      - TypeScript
+      - React
+      - Capacitor
+    link: https://hydropush-app.vercel.app
+  - name: SECURE FLAG (CTF)
+    description: Site fictício usado como alvo para desafios de cibersegurança
+      forense. Projeto educativo acadêmico.
+    technologies:
+      - TypeScript
+      - Cibersegurança
+    link: https://secure-flag-projeto-ctf.vercel.app
+  - name: PHOTO-TEST-ENGINE
+    description: Ambiente de desenvolvimento (IDE) ultrarrápido rodando direto no
+      navegador. Permite testar, visualizar e desenvolver componentes React
+      (TSX/JSX) de maneira instantânea e isolada.
+    technologies:
+      - TypeScript
+      - React
+    link: https://photo-test-engine.vercel.app/
+  - name: BANCO SIC MUNDUS
+    description: Terminal contábil retrô e misterioso. A lógica de transações em
+      Linguagem C roda no navegador via WebAssembly (WASM) integrada a uma
+      interface hacker clássica CRT.
+    technologies:
+      - TypeScript
+      - React 19
+      - C
+      - WebAssembly (WASM)
+    link: https://banco-sic-mundus.vercel.app/
+  - name: TRYMON OS
+    description: Projeto experimental explorando como sistemas operacionais podem
+      ser estruturados dentro de um navegador. Ambiente seguro para execução de
+      binários isolados (Microkernel em Rust).
+    technologies:
+      - Rust
+      - TypeScript
+      - WebAssembly
+    link: https://trymon-os.vercel.app/
+  - name: WHISPER VALLEY REBUILD
+    description: Uma reconstrução expandida e modernização do projeto original
+      Whisper Valley. Desenvolvido como iniciativa de preservação e continuidade
+      criativa, expandindo os horizontes e a estrutura técnica do projeto base.
+    technologies:
+      - TypeScript
+      - Game Development
+      - React
+    link: https://whisper-valley-rebuild.vercel.app/
+  - name: SELF PANDORA GAME
+    description: Um jogo de plataforma 3D psicológico, abstrato e atmosférico sobre
+      autodescoberta e aceitação. Desenvolvido do zero, o jogador navega pela
+      rede neural de Pandora em 33 fases baseadas em sentimentos. Apresenta
+      trilhas sonoras procedurais sintetizadas em tempo real via Web Audio API.
+    technologies:
+      - Three.js
+      - TypeScript
+      - Web Audio API
+      - Game Development
+    link: https://self-pandora-game.vercel.app/
+projects_disclaimer: "* Nota: A maioria desses projetos foram desenvolvidos
+  utilizando metodologias de IA e ferramentas auxiliares (Vibe Coding),
+  combinados ao meu conhecimento estrutural, administrativo e lógica de
+  sistemas."

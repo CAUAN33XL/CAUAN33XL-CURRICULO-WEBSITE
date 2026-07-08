@@ -19,7 +19,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
     <>
       <Page>
       <header className="mb-10 text-center border-b-2 border-neutral-200 dark:border-neutral-800 pb-8">
-        <h1 className="text-4xl font-bold text-neutral-900 dark:text-white tracking-tight uppercase mb-2">
+        <h1 className="text-3xl md:text-4xl dark:text-2xl dark:md:text-3xl font-bold text-neutral-900 dark:text-white dark:font-['Xirod'] tracking-tight uppercase mb-2">
           {data.personal_info.name}
         </h1>
         <div className="text-sm text-neutral-600 dark:text-neutral-400 flex flex-wrap justify-center gap-x-4 gap-y-1">
@@ -35,7 +35,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
       </header>
 
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-4 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white dark:font-['Xirod'] mb-4 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
           {labels.summary}
         </h2>
         <ul className="list-disc pl-5 space-y-2 text-neutral-700 dark:text-neutral-300 text-sm leading-relaxed">
@@ -46,7 +46,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
       </section>
 
       <section className="mb-10 page-break">
-        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white dark:font-['Xirod'] mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
           {labels.experience}
         </h2>
         <div className="space-y-6">
@@ -74,7 +74,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
       </section>
 
       <section className="mb-10 page-break">
-        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white dark:font-['Xirod'] mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
           {labels.education}
         </h2>
         <div className="space-y-4">
@@ -91,7 +91,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
       </section>
 
       <section className="page-break">
-        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
+        <h2 className="text-2xl font-bold text-neutral-900 dark:text-white dark:font-['Xirod'] mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
           {labels.skills}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -141,7 +141,7 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
       {data.projects && data.projects.length > 0 && (
         <Page>
         <section className="mt-10 page-break">
-          <h2 className="text-2xl font-bold text-neutral-900 dark:text-white mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
+          <h2 className="text-2xl font-bold text-neutral-900 dark:text-white dark:font-['Xirod'] mb-6 uppercase tracking-wider border-l-4 border-black dark:border-white pl-3">
             {labels.projects}
           </h2>
           

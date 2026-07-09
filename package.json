@@ -18,8 +18,6 @@
   "type": "commonjs",
   "dependencies": {
     "@react-pdf/renderer": "^4.5.1",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.6.1",
     "chalk": "^5.6.2",
     "docx": "^9.7.1",
     "html-to-image": "^1.11.13",
@@ -29,7 +27,6 @@
     "qrcode.react": "^4.2.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "three": "^0.185.1",
     "yaml": "^2.9.0"
   },
   "devDependencies": {
@@ -39,7 +36,6 @@
     "@types/qrcode": "^1.5.6",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@types/three": "^0.185.0",
     "@vitejs/plugin-react": "^6.0.3",
     "autoprefixer": "^10.5.2",
     "postcss": "^8.5.16",

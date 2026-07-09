@@ -6,9 +6,10 @@ export interface ResumeProps {
   data: CVData;
   labels: any;
   onOpenIframe?: (url: string) => void;
+  onOpen3DMode?: () => void;
 }
 
-export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) => {
+export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe, onOpen3DMode }) => {
   const Page: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <div className="resume-page-export antialiased w-full p-12 bg-white dark:bg-black text-[#1f2937] dark:text-neutral-100 shadow-2xl dark:shadow-neutral-900/50 rounded-lg overflow-hidden">
       {children}
@@ -97,19 +98,6 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
             <h3 className="text-sm font-bold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">
-              {labels.languages}
-            </h3>
-            <ul className="space-y-2">
-              {data.skills.languages.map((skill, i) => (
-                <li key={i} className="flex justify-between items-center text-sm border-b border-neutral-100 dark:border-neutral-800 pb-1">
-                  <span className="text-neutral-700 dark:text-neutral-300">{skill.name}</span>
-                  <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400">{skill.level}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-sm font-bold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">
               {labels.technology}
             </h3>
             <ul className="space-y-2">
@@ -127,6 +115,19 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
             </h3>
             <ul className="space-y-2">
               {data.skills.administrative.map((skill, i) => (
+                <li key={i} className="flex justify-between items-center text-sm border-b border-neutral-100 dark:border-neutral-800 pb-1">
+                  <span className="text-neutral-700 dark:text-neutral-300">{skill.name}</span>
+                  <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400">{skill.level}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-bold text-neutral-900 dark:text-white uppercase tracking-wider mb-3">
+              {labels.languages}
+            </h3>
+            <ul className="space-y-2">
+              {data.skills.languages.map((skill, i) => (
                 <li key={i} className="flex justify-between items-center text-sm border-b border-neutral-100 dark:border-neutral-800 pb-1">
                   <span className="text-neutral-700 dark:text-neutral-300">{skill.name}</span>
                   <span className="text-xs font-semibold text-neutral-500 dark:text-neutral-400">{skill.level}</span>
@@ -181,41 +182,54 @@ export const Resume: React.FC<ResumeProps> = ({ data, labels, onOpenIframe }) =>
           )}
           <div className="space-y-6">
             {data.projects.map((proj, i) => (
-              <div key={i} className="flex justify-between items-start">
-                <div className="flex-1 pr-4">
-                  <div className="flex justify-between items-baseline mb-1">
-                    <h3 className="text-lg font-bold text-neutral-900 dark:text-white">{proj.name}</h3>
-                  </div>
-                  <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 leading-relaxed">{proj.description}</p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {proj.technologies.map((tech, j) => (
-                      <span key={j} className="text-xs font-semibold bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 px-2 py-1 rounded">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                {proj.link && (
-                  <div className="flex-shrink-0 pt-1 flex flex-col items-center gap-1.5 ml-4">
-                    <div className="p-1 bg-white border border-neutral-200 dark:border-neutral-800 rounded-sm shadow-sm inline-block">
-                      <QRCodeSVG value={proj.link} size={64} level="M" />
-                    </div>
-                    <a 
-                      href={proj.link} 
-                      target="_blank" 
-                      onClick={(e) => {
-                        if (onOpenIframe) {
-                          e.preventDefault();
-                          onOpenIframe(proj.link!);
-                        }
-                      }}
-                      className="text-[10px] font-bold text-white dark:text-black bg-neutral-900 dark:bg-white px-3 py-1 rounded w-full text-center hover:bg-white hover:text-black hover:outline hover:outline-2 hover:outline-black dark:hover:bg-black dark:hover:text-white dark:hover:outline-white transition-all tracking-wider no-underline"
+              <React.Fragment key={i}>
+                {proj.name === "33XL SYSTEM (WEBSITE OFICIAL)" && onOpen3DMode && (
+                  <div className="w-full flex justify-center my-8">
+                    <button 
+                      onClick={onOpen3DMode}
+                      className="bg-black text-white dark:bg-white dark:text-black border-2 border-transparent dark:border-white hover:bg-white hover:text-black hover:border-black dark:hover:bg-black dark:hover:text-white dark:hover:border-white px-6 py-3 rounded font-['Xirod'] text-xs sm:text-sm shadow-xl hover:scale-105 transition-all flex items-center gap-3"
                     >
-                      {labels.accessBtn}
-                    </a>
+                      <span className="text-xl">🕶️</span>
+                      ENTRAR NO MODO 3D (INTERATIVO)
+                    </button>
                   </div>
                 )}
-              </div>
+                <div className="flex justify-between items-start">
+                  <div className="flex-1 pr-4">
+                    <div className="flex justify-between items-baseline mb-1">
+                      <h3 className="text-lg font-bold text-neutral-900 dark:text-white">{proj.name}</h3>
+                    </div>
+                    <p className="text-sm text-neutral-700 dark:text-neutral-300 mb-2 leading-relaxed">{proj.description}</p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {proj.technologies.map((tech, j) => (
+                        <span key={j} className="text-xs font-semibold bg-neutral-100 dark:bg-neutral-900 text-neutral-600 dark:text-neutral-400 px-2 py-1 rounded">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  {proj.link && (
+                    <div className="flex-shrink-0 pt-1 flex flex-col items-center gap-1.5 ml-4">
+                      <div className="p-1 bg-white border border-neutral-200 dark:border-neutral-800 rounded-sm shadow-sm inline-block">
+                        <QRCodeSVG value={proj.link} size={64} level="M" />
+                      </div>
+                      <a 
+                        href={proj.link} 
+                        target="_blank" 
+                        onClick={(e) => {
+                          if (onOpenIframe) {
+                            e.preventDefault();
+                            onOpenIframe(proj.link!);
+                          }
+                        }}
+                        className="text-[10px] font-bold text-white dark:text-black bg-neutral-900 dark:bg-white px-3 py-1 rounded w-full text-center hover:bg-white hover:text-black hover:outline hover:outline-2 hover:outline-black dark:hover:bg-black dark:hover:text-white dark:hover:outline-white transition-all tracking-wider no-underline"
+                      >
+                        {labels.accessBtn}
+                      </a>
+                    </div>
+                  )}
+                </div>
+              </React.Fragment>
             ))}
           </div>
         </section>

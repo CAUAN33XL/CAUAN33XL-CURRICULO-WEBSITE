@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import ReactDOM from 'react-dom/client'
 import { Resume } from './components/Resume'
-import { Scene3D } from './components/3d/Scene'
 import { buildDocx } from './generators/docx'
 import { Packer } from 'docx'
 import { toPng } from 'html-to-image'
@@ -83,8 +82,14 @@ const App = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isExportOpen, setIsExportOpen] = useState(false);
-  const [is3DMode, setIs3DMode] = useState(false);
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
+  
+  const [isDark, setIsDark] = useState(() => {
+    if (typeof document !== 'undefined') {
+      return document.documentElement.classList.contains('dark');
+    }
+    return true;
+  });
 
   const controlsRef = useRef<HTMLDivElement>(null);
 
@@ -107,6 +112,18 @@ const App = () => {
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, []);
+
+  // Prevent background scrolling when iframe is open
+  useEffect(() => {
+    if (iframeUrl) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto'; // ensure it resets properly
+    }
+    return () => {
+      document.body.style.overflow = 'auto';
+    }
+  }, [iframeUrl]);
 
   const handlePrint = () => {
     window.print();
@@ -255,7 +272,7 @@ const App = () => {
               {/* Modo 3D */}
               <div>
                 <button 
-                  onClick={() => { setIs3DMode(true); setIsMenuOpen(false); }}
+                  onClick={() => { setIframeUrl('https://ram-3d-mode.vercel.app/'); setIsMenuOpen(false); }}
                   className="w-full py-4 px-4 bg-white hover:bg-neutral-200 text-black border-2 border-black dark:border-white font-black text-xs tracking-widest uppercase rounded shadow-lg transition-all flex items-center justify-center gap-2"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" /></svg>
@@ -267,10 +284,18 @@ const App = () => {
 
               {/* Tema e Idioma */}
               <div className="space-y-4">
-                <div className="flex items-center justify-between">
+                <div className="flex justify-between items-center w-full px-2">
                   <span className="text-xs font-bold tracking-widest uppercase text-neutral-500 dark:text-neutral-400">Tema</span>
                   <button 
-                    onClick={() => document.documentElement.classList.toggle('dark')}
+                    onClick={() => {
+                      const nextDark = !isDark;
+                      setIsDark(nextDark);
+                      if (nextDark) {
+                        document.documentElement.classList.add('dark');
+                      } else {
+                        document.documentElement.classList.remove('dark');
+                      }
+                    }}
                     className="p-2 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
                   >
                     <svg className="w-4 h-4 hidden dark:block text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>
@@ -335,7 +360,15 @@ const App = () => {
 
 
       <div className="flex flex-col gap-10 w-full max-w-4xl mb-24">
-        <Resume data={translations[lang].data} labels={translations[lang].labels} onOpenIframe={setIframeUrl} />
+        <Resume 
+          data={translations[lang].data} 
+          labels={translations[lang].labels} 
+          onOpenIframe={setIframeUrl} 
+          onOpen3DMode={() => {
+            setIframeUrl('https://ram-3d-mode.vercel.app/');
+            setIsMenuOpen(false);
+          }}
+        />
       </div>
 
       {iframeUrl && (
@@ -354,28 +387,11 @@ const App = () => {
           </div>
           <iframe 
             src={iframeUrl} 
-            className="w-full flex-1 bg-white" 
-            title="Project Preview"
-            sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+            className="w-full flex-1 bg-white border-none outline-none" 
+            aria-label="Project Preview"
+            sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-pointer-lock"
+            allow="pointer-lock; fullscreen"
           />
-        </div>
-      )}
-
-      {is3DMode && (
-        <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex flex-col">
-          <div className="h-6 bg-black flex justify-between items-center px-3 border-b border-neutral-800 shrink-0">
-            <span className="text-neutral-400 text-[10px] font-mono truncate max-w-md">3D Mode - Portfólio Interativo</span>
-            <button 
-              onClick={() => setIs3DMode(false)} 
-              className="text-neutral-400 hover:text-red-500 transition-colors p-0.5"
-              title="Fechar (X)"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          <Scene3D />
         </div>
       )}
     </div>
